@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ortizal19009/CSE341.git"
+    "url": "git+https://github.com/arojases/CSE-341.git"
   },
   "keywords": [],
-  "author": "Alexis Ortiz",
+  "author": "Ariel Rojas",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ortizal19009/CSE341/issues"
+    "url": "https://github.com/arojases/CSE-341/issues"
   },
-  "homepage": "https://github.com/ortizal19009/CSE341#readme",
+  "homepage": "https://github.com/arojases/CSE-341#readme",
   "dependencies": {
     "express": "^4.18.2"
   },
