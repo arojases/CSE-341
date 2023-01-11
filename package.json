@@ -1,7 +1,7 @@
 {
   "name": "cse341",
   "version": "1.0.0",
-  "description": "",
+  "description": "GET http://localhost:9090/contacts",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/arojases/CSE-341#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^4.13.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
