@@ -1,11 +1,18 @@
-const routes = require('express').Router();
+const express = require('express');
+const router = express.Router();
+const app = express();
+const fs = require("fs");
+const PATH_ROUTES = __dirname;
 
-routes.get('/', (req, res) => {
-    res.send('Ariel Rojas');
+const removeExtension = (fileName) => {
+  return fileName.split(".").shift();
+};
+
+fs.readdirSync(PATH_ROUTES).filter((file) => {
+  const name = removeExtension(file);
+  if (name !== 'index') {
+      router.use(`/${name}`,require(`./${file}`))
+  }
 });
 
-routes.get('/test', (req, res) => {
-    res.send('Karina Rojas');
-});
-
-module.exports = routes;
+module.exports = router;
