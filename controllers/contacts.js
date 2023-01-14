@@ -1,7 +1,6 @@
 const { getDb } = require("../DB/connection");
 const { ObjectId } = require("mongodb");
-//const express = require("express");
-//const router = express.Router();
+
 const getContacts = (req, res) => {
   const db = getDb();
   let clients = [];
@@ -12,9 +11,10 @@ const getContacts = (req, res) => {
       res.status(200).send(clients);
     })
     .catch(() => {
-      res.status(500).json({ error: "Could not found the documents" });
+      res.status(500).json({ error: "No ducuments found" });
     });
 };
+
 const getContactsById = (req, res) => {
   const db = getDb();
   let clients = [];
@@ -27,4 +27,5 @@ const getContactsById = (req, res) => {
       res.status(500).json({ error: "Could not fetch the document by id" });
     });
 };
+
 module.exports = { getContacts, getContactsById };

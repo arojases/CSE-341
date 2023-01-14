@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 8080;
 const { ConectionDb } = require("./DB/connection");
+
 /* DB CONECTION */
 let db;
 ConectionDb((err) => {
@@ -14,6 +15,6 @@ ConectionDb((err) => {
     console.log(`Conection error: ${err}`);
   }
 });
-/* ROUTES */
 
+/* ROUTES */
 app.use("/", require("./routes"));

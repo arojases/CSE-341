@@ -2,6 +2,7 @@ const { MongoClient } = require("mongodb");
 require("dotenv").config();
 const uri = process.env.DB_URI;
 let dbConection;
+
 const ConectionDb = (cb) => {
   MongoClient.connect(uri)
     .then((client) => {
@@ -12,8 +13,7 @@ const ConectionDb = (cb) => {
       return cb(err);
     });
 };
+
 const getDb = () => dbConection;
-module.exports = {
-  ConectionDb,
-  getDb,
-};
+
+module.exports = { ConectionDb, getDb };
