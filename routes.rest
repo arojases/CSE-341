@@ -1,4 +1,5 @@
-GET http://localhost:8080 HTTP/1.1 
+//LOCALHOST
+GET http://localhost:8080 HTTP/1.1
 ###
 GET http://localhost:8080/contacts HTTP/1.1 
 ### 
@@ -6,4 +7,16 @@ GET http://localhost:8080/contacts/63be51a0706ae941ca591fe9 HTTP/1.1
 ###
 GET http://localhost:8080/contacts/63be538d706ae941ca591fea HTTP/1.1 
 ### 
+GET http://localhost:8080/contacts/63be53ed706ae941ca591feb HTTP/1.1
+###
+
+//RENDER
+GET https://arojasescse341.onrender.com HTTP/1.1
+###
+GET https://arojasescse341.onrender.com/contacts HTTP/1.1
+###
+GET http://localhost:8080/contacts/63be51a0706ae941ca591fe9 HTTP/1.1
+###
+GET http://localhost:8080/contacts/63be538d706ae941ca591fea HTTP/1.1
+###
 GET http://localhost:8080/contacts/63be53ed706ae941ca591feb HTTP/1.1
