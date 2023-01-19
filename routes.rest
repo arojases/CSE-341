@@ -10,6 +10,33 @@ GET http://localhost:8080/contacts/63be538d706ae941ca591fea HTTP/1.1
 GET http://localhost:8080/contacts/63be53ed706ae941ca591feb HTTP/1.1
 ###
 
+###Create contact 
+POST http://localhost:8080/contacts HTTP/1.1 
+Content-Type: application/json
+
+{
+    "firstName": "Pedro", 
+    "lastName": "Herrera", 
+    "email": "ps@test.com", 
+    "favoriteColor": "blue", 
+    "birthday": "10/20/1990"
+}
+
+### PUT contact 
+PUT http://localhost:8080/contacts/63c8d2b00c41f2705b3c0a9a HTTP/1.1 
+Content-type: application/json
+
+{
+    "firstName": "Pedro", 
+    "lastName": "Herrera", 
+    "email": "ps@test.com", 
+    "favoriteColor": "Red", 
+    "birthday": "10/20/1990"
+} 
+
+### DELETE contact 
+DELETE http://localhost:8080/contacts/63c8d127c0e2210f76893c29 HTTP/1.1
+
 //RENDER
 GET https://arojasescse341.onrender.com HTTP/1.1
 ###
