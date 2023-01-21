@@ -50,6 +50,7 @@ const createContact = async (req, res) => {
 
   const db = getDb();
   const result = await db.collection("contacts").insertOne(contact);
+  
 
   if (result.acknowledged) {
     res.status(201).json(result);
